@@ -10,7 +10,7 @@
 
 <body class="bg-gray-600 flex flex-col items-center justify-center">
   <header class="px-5flex flex-col items-center justify-center">
-    <h1 class="text-lg text-cyan-100 text-shadow-lg flex justify-center  bg-linear-to-t from-cyan-500 to-indigo-500">Notepad</h1>
+    <h1 class=" font-bold text-lg text-cyan-100 text-shadow-lg flex justify-center ">Notepad</h1>
     <div class="buttonGroup cursor-pointer mt-5">
       <button id="add">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -29,12 +29,10 @@
       </button>
     </div>
   </header>
-  <main>
-    <div class="flex-col px-5 mt-10 py-5 border-gray-800 border-8 rounded-3xl min-h-screen w-120 md:w-150 lg:w-240 h-full">
-      <h1 id="title" class="cursor-text text-5xl flex justify-center items-center">Title</h1>
-      <p id="content" class="cursor-text">Write here</p>
+    <div class="t flex-col px-5 mt-10 py-5 bg-amber-100 border-gray-800 border-8 rounded-3xl min-h-screen w-120 md:w-150 lg:w-240 h-full">
+      <h1 contenteditable="true" id="title" class="cursor-text text-5xl flex justify-center items-center focus:outline-none min-h-20">Title</h1>
+      <p contenteditable="true" id="content" class="cursor-text headline-text h-200 focus:outline-none">Write here:</p>
     </div>
-  </main>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
