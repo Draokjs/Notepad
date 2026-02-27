@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.headline-text {
+  line-height: 2rem;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(2rem - 1px),
+    black calc(2rem - 1px),
+    black 2rem
+  );
+}
