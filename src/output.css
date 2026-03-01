@@ -9,13 +9,13 @@
       "Courier New", monospace;
     --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-cyan-100: oklch(95.6% 0.045 203.388);
-    --color-cyan-500: oklch(71.5% 0.143 215.221);
-    --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
@@ -173,14 +173,20 @@
   }
 }
 @layer utilities {
-  .mt-5 {
-    margin-top: calc(var(--spacing) * 5);
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
   .flex {
     display: flex;
+  }
+  .inline {
+    display: inline;
+  }
+  .inline-block {
+    display: inline-block;
   }
   .size-6 {
     width: calc(var(--spacing) * 6);
@@ -191,12 +197,6 @@
   }
   .h-full {
     height: 100%;
-  }
-  .min-h-20 {
-    min-height: calc(var(--spacing) * 20);
-  }
-  .min-h-screen {
-    min-height: 100vh;
   }
   .w-120 {
     width: calc(var(--spacing) * 120);
@@ -232,11 +232,24 @@
   .bg-gray-600 {
     background-color: var(--color-gray-600);
   }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-none {
+    background-image: none;
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -276,6 +289,12 @@
 .headline-text {
   line-height: 2rem;
   background-image: repeating-linear-gradient( to bottom, transparent 0, transparent calc(2rem - 1px), black calc(2rem - 1px), black 2rem );
+}
+input:focus::placeholder {
+  color: transparent;
+}
+textarea:focus::placeholder {
+  color: transparent;
 }
 @property --tw-border-style {
   syntax: "*";
